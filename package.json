@@ -1,0 +1,24 @@
+{
+  "name": "cnkt2",
+  "version": "1.0.0",
+  "description": "Cnkt2 - Onde clientes encontram provedores.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIEGOVZK/Cnkt2.git"
+  },
+  "keywords": ["NodeJS", "ExpressJS", "api", "webapp", "cnkt2"],
+  "author": "Diego Anestor Coutinho & Tiago de Morais Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DIEGOVZK/Cnkt2/issues"
+  },
+  "homepage": "https://github.com/DIEGOVZK/Cnkt2#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "typescript": "^4.7.2"
+  }
+}
