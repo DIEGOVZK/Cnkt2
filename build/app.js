@@ -35,11 +35,50 @@ app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '..', 'public', 'index.html'));
 });
+app.post('/', (req, res) => {
+    parse.index(req, res);
+});
 app.get('/login', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '..', 'public', 'login.html'));
 });
 app.post('/login', (req, res) => {
     parse.login(req, res);
+});
+app.get('/register', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'register.html'));
+});
+app.post('/register', (req, res) => {
+    parse.register(req, res);
+});
+app.get('/map', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'map.html'));
+});
+app.post('/map', (req, res) => {
+    parse.map(req, res);
+});
+app.get('/plano', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'plano.html'));
+});
+app.post('/plano', (req, res) => {
+    parse.plano(req, res);
+});
+app.get('/instalador', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'instalador.html'));
+});
+app.post('/instalador', (req, res) => {
+    parse.instalador(req, res);
+});
+app.get('/confirmacao', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'confirmacao.html'));
+});
+app.post('/confirmacao', (req, res) => {
+    parse.confirmacao(req, res);
+});
+app.get('/servicos', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'servicos.html'));
+});
+app.post('/servicos', (req, res) => {
+    parse.servicos(req, res);
 });
 app.listen(3000, () => {
     console.log('Server started on port 3000');
