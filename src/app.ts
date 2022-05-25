@@ -1,7 +1,7 @@
 // Importa dependências - Express, path, body-parser, parser
 import bodyParser from 'body-parser';
 import * as parse from './parser';
-import * as map from './mapper';
+import * as ct from './coreTools';
 import express from 'express';
 import path from 'path';
 
@@ -39,8 +39,31 @@ app.post('/register', (req, res) => {
 });
 
 // ============================= MAPA_PROVEDOR ============================= //
+
+// Cria uma lista que armazena nome, lat, lng, color de um provedor
+let provList: { name: String; lat: number; lng: number; range: number; color: String; }[] = [];
+
+
+// Popula a lista de providores com dados de exemplo
+provList.push({
+    name: 'VIVOX',
+    lat: -22.256623,
+    lng: -45.696074,
+    range: 1,
+    color: '81211355'
+});
+
+provList.push({
+    name: 'VOUE',
+    lat: -22.2482414,
+    lng: -45.7068536,
+    range: 1,
+    color: '812DD355'
+});
+
+
 app.get('/map', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public', 'map.html'));
+    res.send(ct.getMap(provList));
 });
 
 app.post('/map', (req, res) => {

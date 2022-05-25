@@ -28,6 +28,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const body_parser_1 = __importDefault(require("body-parser"));
 const parse = __importStar(require("./parser"));
+const ct = __importStar(require("./coreTools"));
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
@@ -50,8 +51,23 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
     parse.register(req, res);
 });
+let provList = [];
+provList.push({
+    name: 'VIVOX',
+    lat: -22.256623,
+    lng: -45.696074,
+    range: 1,
+    color: '81211355'
+});
+provList.push({
+    name: 'VOUE',
+    lat: -22.2482414,
+    lng: -45.7068536,
+    range: 1,
+    color: '812DD355'
+});
 app.get('/map', (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'map.html'));
+    res.send(ct.getMap(provList));
 });
 app.post('/map', (req, res) => {
     parse.map(req, res);
