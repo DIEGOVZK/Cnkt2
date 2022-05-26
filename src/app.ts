@@ -10,6 +10,7 @@ const app = express();
 
 // Configura o app para usar o body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // ============================= ROOT ============================= //
 app.get('/', (req, res) => {
