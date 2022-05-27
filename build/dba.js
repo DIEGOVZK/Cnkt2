@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.signContract = exports.populateDB = exports.relationshipClientInstaller = exports.relationshipClientPlan = exports.relationshipProviderPlan = exports.createInstaller = exports.createPlan = exports.createProvider = exports.createClient = exports.deleteAll = void 0;
+exports.signContract = exports.populateDB = exports.getProviderInRange2 = exports.relationshipClientInstaller = exports.relationshipClientPlan = exports.relationshipProviderPlan = exports.createInstaller = exports.createPlan = exports.createProvider = exports.createClient = exports.deleteAll = void 0;
 const neo4j_driver_1 = __importDefault(require("neo4j-driver"));
 const driver = neo4j_driver_1.default.driver("bolt://54.236.32.225:7687", neo4j_driver_1.default.auth.basic("neo4j", "diagnoses-circumstance-representatives"));
 function runDB(query) {
@@ -211,8 +211,7 @@ function getProviderInRange(cName) {
                     "range": provRange,
                     "lat": provLat,
                     "long": provLong,
-                    "color": provColor,
-                    "dist": response.body[i].dist
+                    "color": provColor
                 };
                 providersList = providersList.concat(dict);
             }
@@ -221,14 +220,39 @@ function getProviderInRange(cName) {
         return providersList;
     });
 }
+function getProviderInRange2(cName) {
+    let providersList = [{
+            "nome": "Viasat",
+            "range": "2",
+            "lat": "-22.256623",
+            "long": "-45.696074",
+            "color": "43c2d033"
+        },
+        {
+            "nome": "Vouy",
+            "range": "1",
+            "lat": "-22.2482414",
+            "long": "-45.7068700",
+            "color": "d0cb4333"
+        },
+        {
+            "nome": "User",
+            "range": "0.01",
+            "lat": "-22.2552414",
+            "long": "-45.7068700",
+            "color": "d0cb4333"
+        }];
+    return providersList;
+}
+exports.getProviderInRange2 = getProviderInRange2;
 function populateDB() {
     createClient("Usuario", "523.631.636-39", "(35)9.7278-7442", "Rua do suario", "-22.2582414", "-45.7070536");
     createInstaller("Ana Júlia C.", "000.111.222-33", "Rua 25", "-22.2682414", "-45.7110536", "4");
     createInstaller("Carlos Almeida A.", "000.222.333-11", "Rua 26", "-22.2619414", "-46.7110536", "5");
     createInstaller("Célio Do Carmo P.", "222.333.111-00", "Rua 27", "-22.2282414", "-45.7112536", "3");
     createInstaller("Victor Júlio da S.", "123.312.231-55", "Rua 28", "-22.2583414", "-45.7070546", "5");
-    createProvider("Vouy", "Rua da Vouy", "-22.2482414", "-45.7068536", "1", "d61f1f");
-    createProvider("Viasat", "Rua da Viasat", "-22.256623", "-45.696074", "2", "16195a");
+    createProvider("Vouy", "Rua da Vouy", "-22.2482414", "-45.7068536", "1", "d0cb43");
+    createProvider("Viasat", "Rua da Viasat", "-22.256623", "-45.696074", "2", "43c2d0");
     createProvider("Vivox", "Rua da Vivox", "-22.2572414", "-45.7010536", "1", "1f22d6");
     createPlan("ECONÔMICO", "1.5M", "10M", "25Gb", "75.00");
     createPlan("SMART", "3M", "15M", "40Gb", "100.00");
@@ -242,4 +266,3 @@ function signContract() {
 }
 exports.signContract = signContract;
 console.log("Start");
-getProviderInRange("Usuario");
