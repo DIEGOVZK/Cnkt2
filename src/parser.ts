@@ -1,5 +1,5 @@
 // Importa dependências
-import * as DBA from './DBA';
+import * as DBA from './dba';
 
 
 // Função parce do index
@@ -30,8 +30,9 @@ export function register(req: any, res: any) {
     let endereco = req.body.endereco;
     let telefone = req.body.telefone;
 
-    DBA.createClient(nome, cpf, telefone, endereco, senha, "-22.2582414", "-45.7070536");
+    DBA.createClient(nome, cpf, telefone, endereco,  "-22.2582414", "-45.7070536");
 
+    res.redirect("/index.html");
 }
 
 // Função parce do mapa
@@ -67,6 +68,10 @@ export function instalador(req: any, res: any) {
 export function confirmacao(req: any, res: any) {
 
     // TODO: Implementar a confirmação do pedido
+    DBA.signContract();
+
+    res.redirect("/index.html")
+
 
 }
 

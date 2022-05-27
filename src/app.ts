@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import * as parse from './parser';
 import * as ct from './coreTools';
 import express from 'express';
-import * as DBA from './DBA';
+import * as DBA from './dba';
 import path from 'path';
 
 // Cria o app express
@@ -46,7 +46,7 @@ app.post('/register', (req, res) => {
 // ============================= MAPA_PROVEDOR ============================= //
 
 app.get('/map', (req, res) => {
-    res.send(ct.getMap(DBA.getProviderInRange('Jaozin')));
+    res.send(ct.getMap(DBA.getProviderInRange2('Usuario')));
 });
 
 app.post('/map', (req, res) => {

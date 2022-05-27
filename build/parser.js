@@ -24,7 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.servicos = exports.confirmacao = exports.instalador = exports.plano = exports.map = exports.register = exports.login = exports.index = void 0;
-const DBA = __importStar(require("./DBA"));
+const DBA = __importStar(require("./dba"));
 function index(req, res) {
 }
 exports.index = index;
@@ -40,7 +40,8 @@ function register(req, res) {
     let senha = req.body.senha;
     let endereco = req.body.endereco;
     let telefone = req.body.telefone;
-    DBA.createClient(nome, cpf, telefone, endereco, senha, "-22.2582414", "-45.7070536");
+    DBA.createClient(nome, cpf, telefone, endereco, "-22.2582414", "-45.7070536");
+    res.redirect("/index.html");
 }
 exports.register = register;
 function map(req, res) {
@@ -55,6 +56,8 @@ function instalador(req, res) {
 }
 exports.instalador = instalador;
 function confirmacao(req, res) {
+    DBA.signContract();
+    res.redirect("/index.html");
 }
 exports.confirmacao = confirmacao;
 function servicos(req, res) {

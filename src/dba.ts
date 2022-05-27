@@ -268,6 +268,34 @@ async function getProviderInRange(cName: string){
     return providersList;
 }
 
+export function getProviderInRange2(cName: string){
+    
+    
+    let providersList = [{
+        "nome": "Viasat",
+        "range": "2",
+        "lat": "-22.256623",
+        "long": "-45.696074",
+        "color": "43c2d033"
+    },
+    {
+        "nome": "Vouy",
+        "range": "1",
+        "lat": "-22.2482414",
+        "long": "-45.7068700",
+        "color": "d0cb4333"
+    },
+    {
+        "nome": "User",
+        "range": "0.01",
+        "lat": "-22.2552414",
+        "long": "-45.7068700",
+        "color": "d0cb4333"
+    }]
+
+    return providersList;
+}
+
 
 // Povoar db
 export function populateDB () {
@@ -279,8 +307,8 @@ export function populateDB () {
     createInstaller("Célio Do Carmo P.", "222.333.111-00", "Rua 27", "-22.2282414", "-45.7112536", "3");
     createInstaller("Victor Júlio da S.", "123.312.231-55", "Rua 28", "-22.2583414", "-45.7070546", "5");
 
-    createProvider("Vouy", "Rua da Vouy", "-22.2482414", "-45.7068536", "1", "d61f1f");
-    createProvider("Viasat", "Rua da Viasat", "-22.256623", "-45.696074", "2", "16195a")
+    createProvider("Vouy", "Rua da Vouy", "-22.2482414", "-45.7068536", "1", "d0cb43");
+    createProvider("Viasat", "Rua da Viasat", "-22.256623", "-45.696074", "2", "43c2d0")
     createProvider("Vivox", "Rua da Vivox", "-22.2572414", "-45.7010536", "1", "1f22d6");
 
     createPlan("ECONÔMICO", "1.5M", "10M", "25Gb", "75.00");

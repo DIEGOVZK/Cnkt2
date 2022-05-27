@@ -30,7 +30,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const parse = __importStar(require("./parser"));
 const ct = __importStar(require("./coreTools"));
 const express_1 = __importDefault(require("express"));
-const DBA = __importStar(require("./DBA"));
+const DBA = __importStar(require("./dba"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.urlencoded({ extended: false }));
@@ -54,7 +54,7 @@ app.post('/register', (req, res) => {
     parse.register(req, res);
 });
 app.get('/map', (req, res) => {
-    res.send(ct.getMap(DBA.getProviderInRange('Jaozin')));
+    res.send(ct.getMap(DBA.getProviderInRange2('Usuario')));
 });
 app.post('/map', (req, res) => {
     parse.map(req, res);
