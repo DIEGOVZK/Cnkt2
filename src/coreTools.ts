@@ -4,6 +4,7 @@ export function getMap(provList: any): String {
     var url: String = '';
 
     url += '<body style="background-color: black">';
+    url += '<a href="/plano">';
     url += '<img src='
 
     // Cria url base
@@ -24,6 +25,7 @@ export function getMap(provList: any): String {
 
 
     url += ' alt="map" width="100%" />';
+    url += '</a>';
     url += '</body>';
 
 
