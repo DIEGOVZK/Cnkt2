@@ -13,29 +13,36 @@
       <h2>Registro</h2>
       <form action="/register" method="post">
         <div class="user-box">
-          <input type="text" name="cpf" required="">
+          <input type="text" name="cpf" required=""
+          oninvalid="this.setCustomValidity('Entre com seu CPF')"
+          oninput="this.setCustomValidity('')">
           <label>CPF</label>
         </div>
         <div class="user-box">
-          <input type="text" name="nome" required="">
+          <input type="text" name="nome" required=""
+          oninvalid="this.setCustomValidity('Entre com seu nome')"
+          oninput="this.setCustomValidity('')">
           <label>Nome</label>
         </div>
         <div class="user-box">
-          <input type="password" name="senha" required="">
+          <input type="password" name="senha" required=""
+          oninvalid="this.setCustomValidity('Entre com sua senha')"
+          oninput="this.setCustomValidity('')">
           <label>Senha</label>
         </div>
         <div class="user-box">
-          <input type="text" name="endereco" required="">
+          <input type="text" name="endereco" required=""
+          oninvalid="this.setCustomValidity('Entre com seu endereço')"
+          oninput="this.setCustomValidity('')">
           <label>Endereço</label>
         </div>
         <div class="user-box">
-          <input type="text" name="telefone" required="">
+          <input type="text" name="telefone" required=""
+          oninvalid="this.setCustomValidity('Entre com seu telefone')"
+          oninput="this.setCustomValidity('')">
           <label>Telefone</label>
         </div>
-        <a href="/">
-          <span></span>
-          Registrar
-        </a>
+        <input class="input_button" type="submit" value="registrar" />
       </form>
     </div>
   </body>

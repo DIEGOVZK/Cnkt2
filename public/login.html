@@ -11,7 +11,7 @@
   <body>
     <div class="login-box">
       <h2>Login</h2>
-      <form>
+      <form action="/login" method="post">
         <div class="user-box">
           <input type="text" name="cpf" required=""
                  oninvalid="this.setCustomValidity('Entre com seu CPF')"
@@ -24,14 +24,8 @@
                  oninput="this.setCustomValidity('')">
           <label>Senha</label>
         </div>
-        <a href="/map">
-          <span></span>
-          Usuário
-        </a>
-        <a href="/">
-          <span></span>
-          Instalador
-        </a>
+        <input class="input_button" type="submit" value="Usuário" name="user"/>
+        <input class="input_button" type="submit" value="Instalador" name="installer" />
       </form>
     </div>
   </body>

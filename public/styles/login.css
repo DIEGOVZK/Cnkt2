@@ -85,6 +85,32 @@ html {
                 0 0 50px #302c94,
                 0 0 100px #302c94;
   }
+
+  .login-box .input_button:hover{
+    background: #302c94;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #302c94,
+                0 0 25px #302c94,
+                0 0 50px #302c94,
+                0 0 100px #302c94;
+    border-color: #302c94;
+  }
+  .login-box form .input_button {
+    background: transparent;
+    position: relative;
+    border-color: #191b20;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 2px
+  }
   
   .login-box a span {
     position: absolute;
