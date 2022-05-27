@@ -1,5 +1,5 @@
 :root {
-    --background-dark: #191b20;
+  background: #191b20;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
     --spacing-s: 8px;
@@ -18,7 +18,7 @@
   }
   
   html {
-    background-color: #020a0f;
+    background: linear-gradient(#191b20, #243b55);
     height: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -30,7 +30,8 @@
   
   .hero-section {
     align-items: flex-start;
-    background-image: linear-gradient(15deg, #020a0f 0%, #020a0f 150%);
+    background: linear-gradient(#191b20, #243b55);
+    /* background-image: linear-gradient(15deg, #191b20 0%, #243b55 150%); */
     display: flex;
     min-height: 100%;
     justify-content: center;
@@ -39,6 +40,7 @@
   
   .card-grid {
     display: grid;
+    
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: var(--spacing-l);
     grid-row-gap: var(--spacing-l);
@@ -118,8 +120,25 @@
   /* Espaço do topo da página */
   .titulo {
     margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
     color: aliceblue;
     text-align: center;
     padding: var(--spacing-m) 0;
+    border-top: 1px solid #302C94;
+    border-bottom: 1px solid #302C94;
   }
+
+  /* Configura o botão "btn-link" para que tenha contorno, background e espaçamento */
+  .btn-link {
+    border: 1px solid #302C94;
+    background-color: #302C94;
+    padding: var(--spacing-s) var(--spacing-m);
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+  }
+
   

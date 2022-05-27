@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.signContract = exports.populateDB = exports.getProviderInRange2 = exports.relationshipClientInstaller = exports.relationshipClientPlan = exports.relationshipProviderPlan = exports.createInstaller = exports.createPlan = exports.createProvider = exports.createClient = exports.deleteAll = void 0;
+exports.resetDB = exports.signContract = exports.relationsDB = exports.populateDB = exports.getProviderInRange2 = exports.relationshipClientInstaller = exports.relationshipClientPlan = exports.relationshipProviderPlan = exports.createInstaller = exports.createPlan = exports.createProvider = exports.createClient = exports.deleteAll = void 0;
 const neo4j_driver_1 = __importDefault(require("neo4j-driver"));
 const driver = neo4j_driver_1.default.driver("bolt://54.236.32.225:7687", neo4j_driver_1.default.auth.basic("neo4j", "diagnoses-circumstance-representatives"));
 function runDB(query) {
@@ -22,7 +22,7 @@ function runDB(query) {
         const records = response.records.map((record) => {
             return record.toObject();
         });
-        driver.close();
+        session.close();
         return {
             statuescode: 200,
             body: records[0]
@@ -246,7 +246,6 @@ function getProviderInRange2(cName) {
 }
 exports.getProviderInRange2 = getProviderInRange2;
 function populateDB() {
-    createClient("Usuario", "523.631.636-39", "(35)9.7278-7442", "Rua do suario", "-22.2582414", "-45.7070536");
     createInstaller("Ana Júlia C.", "000.111.222-33", "Rua 25", "-22.2682414", "-45.7110536", "4");
     createInstaller("Carlos Almeida A.", "000.222.333-11", "Rua 26", "-22.2619414", "-46.7110536", "5");
     createInstaller("Célio Do Carmo P.", "222.333.111-00", "Rua 27", "-22.2282414", "-45.7112536", "3");
@@ -260,9 +259,21 @@ function populateDB() {
     createPlan("INFINITY", "3", "30", "120Gb", "150.00");
 }
 exports.populateDB = populateDB;
+function relationsDB() {
+    relationshipProviderPlan("Viasat", "ECONÔMICO");
+    relationshipProviderPlan("Viasat", "SMART");
+    relationshipProviderPlan("Viasat", "PRIME");
+    relationshipProviderPlan("Viasat", "INFINITY");
+}
+exports.relationsDB = relationsDB;
 function signContract() {
     relationshipClientPlan("Usuario", "PRIME");
     relationshipClientInstaller("Usuario", "Victor Júlio da S.");
 }
 exports.signContract = signContract;
+function resetDB() {
+    populateDB();
+    relationsDB();
+}
+exports.resetDB = resetDB;
 console.log("Start");

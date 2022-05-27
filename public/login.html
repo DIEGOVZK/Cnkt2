@@ -4,10 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles/login.css">
     <title>Login</title>
   </head>
 
   <body>
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <div class="user-box">
+          <input type="text" name="cpf" required=""
+                 oninvalid="this.setCustomValidity('Entre com seu CPF')"
+                 oninput="this.setCustomValidity('')">
+          <label>CPF</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="senha" required=""
+                 oninvalid="this.setCustomValidity('Entre com sua senha')"
+                 oninput="this.setCustomValidity('')">
+          <label>Senha</label>
+        </div>
+        <input class="input_button" type="submit" value="Usuário" name="user"/>
+        <input class="input_button" type="submit" value="Instalador" name="installer" formaction="instalador_perfil"/>
+      </form>
+    </div>
+  </body>
+
+  <!-- <body>
     <form action="/login" method="post">
       cpf:<br />
       <input
@@ -32,4 +55,4 @@
       <input type="submit" value="login" />
     </form>
   </body>
-</html>
+</html> -->

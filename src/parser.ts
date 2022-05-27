@@ -19,6 +19,8 @@ export function login(req: any, res: any) {
 
 }
 
+
+
 // Função parce do register
 export function register(req: any, res: any) {
 
@@ -61,6 +63,14 @@ export function plano(req: any, res: any) {
 export function instalador(req: any, res: any) {
 
     // TODO: Implementar a listagem dos instaladores
+
+}
+
+// Função perfil do instalador
+export function instalador_perfil(req: any, res: any) {
+
+    // TODO: Implementar a listagem dos instaladores
+    res.redirect("/instalador_perfil")
 
 }
 

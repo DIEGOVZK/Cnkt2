@@ -4,9 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles/register.css">
     <title>Register</title>
   </head>
 
+  <body>
+    <div class="login-box">
+      <h2>Registro</h2>
+      <form action="/register" method="post">
+        <div class="user-box">
+          <input type="text" name="cpf" required=""
+          oninvalid="this.setCustomValidity('Entre com seu CPF')"
+          oninput="this.setCustomValidity('')">
+          <label>CPF</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="nome" required=""
+          oninvalid="this.setCustomValidity('Entre com seu nome')"
+          oninput="this.setCustomValidity('')">
+          <label>Nome</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="senha" required=""
+          oninvalid="this.setCustomValidity('Entre com sua senha')"
+          oninput="this.setCustomValidity('')">
+          <label>Senha</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="endereco" required=""
+          oninvalid="this.setCustomValidity('Entre com seu endereço')"
+          oninput="this.setCustomValidity('')">
+          <label>Endereço</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="telefone" required=""
+          oninvalid="this.setCustomValidity('Entre com seu telefone')"
+          oninput="this.setCustomValidity('')">
+          <label>Telefone</label>
+        </div>
+        <input class="input_button" type="submit" value="registrar" />
+      </form>
+    </div>
+  </body>
+<!-- 
   <body>
     <form action="/register" method="post">
       cpf:<br />
@@ -61,5 +101,5 @@
 
       <input type="submit" value="registrar" />
     </form>
-  </body>
+  </body> -->
 </html>

@@ -17,10 +17,12 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+    
 });
 
 app.post('/', (req, res) => {
     parse.index(req, res);
+    
 });
 
 // ============================= LOGIN ============================= //
@@ -71,6 +73,16 @@ app.get('/instalador', (req, res) => {
 
 app.post('/instalador', (req, res) => {
     parse.instalador(req, res);
+});
+
+// ============================= INSTALADOR PERFIL ============================= //
+
+app.get('/instalador_perfil', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'instalador_perfil.html'));
+});
+
+app.post('/instalador_perfil', (req, res) => {
+    parse.instalador_perfil(req, res);
 });
 
 // ============================= CONFIRMAÇÃO ============================= //

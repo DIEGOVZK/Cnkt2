@@ -31,6 +31,7 @@
   .hero-section {
     align-items: flex-start;
     background: linear-gradient(#191b20, #243b55);
+    /* background-image: linear-gradient(15deg, #191b20 0%, #243b55 150%); */
     display: flex;
     min-height: 100%;
     justify-content: center;
@@ -39,6 +40,7 @@
   
   .card-grid {
     display: grid;
+    
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: var(--spacing-l);
     grid-row-gap: var(--spacing-l);
@@ -81,7 +83,6 @@
     right: 0;
     top: 0;
     transform-origin: center;
-    trsnsform: scale(1) translateZ(0);
     transition: filter 200ms linear, transform 200ms linear;
   }
   
@@ -126,4 +127,17 @@
     border-top: 1px solid #302C94;
     border-bottom: 1px solid #302C94;
   }
+
+  /* Configura o botão "btn-link" para que tenha contorno, background e espaçamento */
+  .btn-link {
+    border: 1px solid #302C94;
+    background-color: #302C94;
+    padding: var(--spacing-s) var(--spacing-m);
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+  }
+
   
