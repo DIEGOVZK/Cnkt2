@@ -277,4 +277,3 @@ function resetDB() {
 }
 exports.resetDB = resetDB;
 console.log("Start");
-resetDB();

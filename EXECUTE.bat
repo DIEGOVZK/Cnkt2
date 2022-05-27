@@ -24,6 +24,6 @@ for /f "usebackq tokens=*" %%a in (`ipconfig ^| findstr IPv4`) do (
   )
 endlocal
 
-
+python "./utils/database.py"
 node "./build/app.js"
 pause

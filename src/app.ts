@@ -32,7 +32,6 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    console.log(req);
     parse.login(req, res);
 });
 
