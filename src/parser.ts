@@ -1,3 +1,7 @@
+// Importa dependências
+import * as DBA from './DBA';
+
+
 // Função parce do index
 export function index(req: any, res: any) {
 
@@ -8,13 +12,10 @@ export function index(req: any, res: any) {
 // Função parce do login
 export function login(req: any, res: any) {
 
-    // TODO: Implementar o login
-
     let username = req.body.cpf;
     let password = req.body.senha;
 
-    // * Teste para ver se os dados foram coletados
-    res.send(`Username: ${username} Password: ${password}`);
+    res.redirect('/map');  
 
 }
 
@@ -29,8 +30,7 @@ export function register(req: any, res: any) {
     let endereco = req.body.endereco;
     let telefone = req.body.telefone;
 
-    // * Teste para ver se os dados foram coletados
-    res.send(`CPF: ${cpf} Nome: ${nome} Senha: ${senha} Endereco: ${endereco} Telefone: ${telefone}`);
+    DBA.createClient(nome, cpf, telefone, endereco, senha, "-22.2582414", "-45.7070536");
 
 }
 
@@ -49,7 +49,10 @@ export function map(req: any, res: any) {
 // Função parce do plano
 export function plano(req: any, res: any) {
 
+    // let provID = req.body.mb100;
+
     // TODO: Implementar a listagem dos planos
+    // res.send(`ID: ${mb100}`);
 
 }
 
