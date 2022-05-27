@@ -118,7 +118,11 @@ body {
 /* Espaço do topo da página */
 .titulo {
   margin-top: 50px;
+  margin-left: 8%;
+  margin-right: 8%;
   color: aliceblue;
   text-align: center;
   padding: var(--spacing-m) 0;
+    border-top: 1px solid #302C94;
+    border-bottom: 1px solid #302C94;
 }

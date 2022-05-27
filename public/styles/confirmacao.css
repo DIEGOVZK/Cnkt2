@@ -118,8 +118,25 @@
   /* Espaço do topo da página */
   .titulo {
     margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
     color: aliceblue;
     text-align: center;
     padding: var(--spacing-m) 0;
+    border-top: 1px solid #302C94;
+    border-bottom: 1px solid #302C94;
   }
+
+  /* Configura o botão "btn-link" para que tenha contorno, background e espaçamento */
+  .btn-link {
+    border: 1px solid #302C94;
+    background-color: #302C94;
+    padding: var(--spacing-s) var(--spacing-m);
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+  }
+
   
