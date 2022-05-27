@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles/register.css">
     <title>Register</title>
   </head>
 
+  <body>
+    <div class="login-box">
+      <h2>Registro</h2>
+      <form action="/register" method="post">
+        <div class="user-box">
+          <input type="text" name="cpf" required="">
+          <label>CPF</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="nome" required="">
+          <label>Nome</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="senha" required="">
+          <label>Senha</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="endereco" required="">
+          <label>Endereço</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="telefone" required="">
+          <label>Telefone</label>
+        </div>
+        <a href="/">
+          <span></span>
+          Registrar
+        </a>
+      </form>
+    </div>
+  </body>
+<!-- 
   <body>
     <form action="/register" method="post">
       cpf:<br />
@@ -61,5 +94,5 @@
 
       <input type="submit" value="registrar" />
     </form>
-  </body>
+  </body> -->
 </html>
