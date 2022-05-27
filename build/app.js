@@ -45,6 +45,7 @@ app.get('/login', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '..', 'public', 'login.html'));
 });
 app.post('/login', (req, res) => {
+    console.log(req);
     parse.login(req, res);
 });
 app.get('/register', (req, res) => {
@@ -70,6 +71,12 @@ app.get('/instalador', (req, res) => {
 });
 app.post('/instalador', (req, res) => {
     parse.instalador(req, res);
+});
+app.get('/instalador_perfil', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '..', 'public', 'instalador_perfil.html'));
+});
+app.post('/instalador_perfil', (req, res) => {
+    parse.instalador_perfil(req, res);
 });
 app.get('/confirmacao', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '..', 'public', 'confirmacao.html'));

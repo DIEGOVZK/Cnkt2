@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.servicos = exports.confirmacao = exports.instalador = exports.plano = exports.map = exports.register = exports.login = exports.index = void 0;
+exports.servicos = exports.confirmacao = exports.instalador_perfil = exports.instalador = exports.plano = exports.map = exports.register = exports.login = exports.index = void 0;
 const DBA = __importStar(require("./dba"));
 function index(req, res) {
 }
@@ -55,6 +55,10 @@ exports.plano = plano;
 function instalador(req, res) {
 }
 exports.instalador = instalador;
+function instalador_perfil(req, res) {
+    res.redirect("/instalador_perfil");
+}
+exports.instalador_perfil = instalador_perfil;
 function confirmacao(req, res) {
     DBA.signContract();
     res.redirect("/index.html");

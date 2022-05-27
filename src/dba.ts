@@ -11,7 +11,8 @@ async function runDB (query:any) {
         return record.toObject();
     })
 
-    driver.close();
+
+    session.close();
     return {
         statuescode: 200,
         body: records[0]
@@ -300,7 +301,7 @@ export function getProviderInRange2(cName: string){
 // Povoar db
 export function populateDB () {
 
-    createClient("Usuario", "523.631.636-39", "(35)9.7278-7442", "Rua do suario","-22.2582414", "-45.7070536");
+    // createClient("Usuario", "523.631.636-39", "(35)9.7278-7442", "Rua do suario","-22.2582414", "-45.7070536");
 
     createInstaller("Ana Júlia C.", "000.111.222-33", "Rua 25", "-22.2682414", "-45.7110536", "4");
     createInstaller("Carlos Almeida A.", "000.222.333-11", "Rua 26", "-22.2619414", "-46.7110536", "5");
@@ -315,6 +316,18 @@ export function populateDB () {
     createPlan("SMART", "3M", "15M", "40Gb", "100.00");
     createPlan("PRIME", "3M", "20M", "80Gb", "120.00");
     createPlan("INFINITY", "3", "30", "120Gb", "150.00");
+    
+
+}
+
+// Povoar db
+export function relationsDB () {
+
+    relationshipProviderPlan("Viasat", "ECONÔMICO")
+    relationshipProviderPlan("Viasat", "SMART")
+    relationshipProviderPlan("Viasat", "PRIME")
+    relationshipProviderPlan("Viasat", "INFINITY")
+
 }
 
 // Gerar relação fictícia entre o usuário, o plano e o instalador
@@ -323,15 +336,18 @@ export function signContract(){
     relationshipClientInstaller("Usuario", "Victor Júlio da S.")
 }
 
+// Função para resetar banco de dados
+export function resetDB() {
+
+    //deleteAll();
+    populateDB(); 
+    relationsDB();
+
+}
+
 // populateDB();
 
-// relationshipProviderPlan("Viasat", "ECONÔMICO")
-// relationshipProviderPlan("Viasat", "SMART")
-// relationshipProviderPlan("Viasat", "PRIME")
-// relationshipProviderPlan("Viasat", "INFINITY")
-
-
-
 console.log("Start");
+// resetDB();
 // signContract();
 // getProviderInRange("Usuario");
