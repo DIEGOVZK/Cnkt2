@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Document</title>
   </head>
 
   <body>
     <form action="/login" method="post">
+      <!-- user input-->
       cpf:<br />
       <input
         type="text"
@@ -18,7 +19,6 @@
         oninvalid="this.setCustomValidity('Entre com seu CPF')"
         oninput="this.setCustomValidity('')"
       /><br /><br />
-
       senha:<br />
       <input
         type="password"
@@ -28,7 +28,7 @@
         oninvalid="this.setCustomValidity('Entre com sua senha')"
         oninput="this.setCustomValidity('')"
       /><br /><br />
-
+      <!-- submit button -->
       <input type="submit" value="login" />
     </form>
   </body>

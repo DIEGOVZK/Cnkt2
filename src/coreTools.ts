@@ -10,7 +10,7 @@ export function userRange(userLOC: any) {
     for (let i = 0; i < provList.length; i++) {
 
         // Calcula matematicamente a distância entre o ponto e a provedora
-        let distance = Math.sqrt(Math.pow(userLOC.lat - provList[i].lat, 2) + Math.pow(userLOC.long - provList[i].long, 2));
+        let distance = Math.sqrt(Math.pow(userLOC.lat - provList[i].lat, 2) + Math.pow(userLOC.lng - provList[i].lng, 2));
 
         // Se a distância for menor que o raio, adiciona o ID da provedora no array
         if (distance <= provList[i].range) {
@@ -39,13 +39,13 @@ export function getMap(provList: any): String {
     for (let i = 0; i < provList.length; i++) {
 
         if (i != 0) url += '||';
-        url += (provList[i].lat + ',' + provList[i].long + '|flag-' + provList[i].nome + '-sm');
+        url += (provList[i].lat + ',' + provList[i].lng + '|flag-' + provList[i].name + '-sm');
     }
 
     // Adiciona os circulos de cobertura
     for (let i = 0; i < provList.length; i++)
         url += ('&shape=radius:' + provList[i].range + 'km|' + provList[i].lat + ',' +
-            provList[i].long + '|fill:' + provList[i].color + '|border:' + provList[i].color);
+            provList[i].lng + '|fill:' + provList[i].color + '|border:' + provList[i].color);
 
 
     url += ' alt="map" width="100%" />';
