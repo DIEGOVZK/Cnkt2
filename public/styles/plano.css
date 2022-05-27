@@ -81,7 +81,6 @@ body {
   right: 0;
   top: 0;
   transform-origin: center;
-  trsnsform: scale(1) translateZ(0);
   transition: filter 200ms linear, transform 200ms linear;
 }
 
