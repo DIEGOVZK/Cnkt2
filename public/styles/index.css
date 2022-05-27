@@ -1,5 +1,5 @@
 body {
-	background-color: #191b20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#191b20), to(#243b55)) fixed;
   }
   svg {
 	position: absolute;
