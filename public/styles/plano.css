@@ -1,5 +1,5 @@
 :root {
-  --background-dark: #191b20;
+  background: #191b20;
   --text-light: rgba(255, 255, 255, 0.6);
   --text-lighter: rgba(255, 255, 255, 0.9);
   --spacing-s: 8px;
@@ -18,7 +18,7 @@
 }
 
 html {
-  background-color: #020a0f;
+  background: linear-gradient(#191b20, #243b55);
   height: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -30,7 +30,7 @@ body {
 
 .hero-section {
   align-items: flex-start;
-  background-image: linear-gradient(15deg, #020a0f 0%, #020a0f 150%);
+  background: linear-gradient(#191b20, #243b55);
   display: flex;
   min-height: 100%;
   justify-content: center;
