@@ -1,6 +1,6 @@
 import neo4j from "neo4j-driver";
 
-const driver = neo4j.driver("bolt://54.236.32.225:7687", neo4j.auth.basic("neo4j", "diagnoses-circumstance-representatives"))
+const driver = neo4j.driver("bolt://3.219.237.135:7687", neo4j.auth.basic("neo4j", "competitions-belt-egg"))
 
 async function runDB (query:any) {
 

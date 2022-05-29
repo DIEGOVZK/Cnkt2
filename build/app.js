@@ -45,7 +45,6 @@ app.get('/login', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '..', 'public', 'login.html'));
 });
 app.post('/login', (req, res) => {
-    console.log(req);
     parse.login(req, res);
 });
 app.get('/register', (req, res) => {

@@ -16,7 +16,7 @@ class Graph:
                 data.append(record)
             return data
 
-db = Graph(uri='bolt://54.236.32.225:7687', user='neo4j', password='diagnoses-circumstance-representatives')
+db = Graph(uri='bolt://3.219.237.135:7687', user='neo4j', password='competitions-belt-egg')
 
 def resetDB():
     db.execute_query("MATCH (n) DETACH DELETE n")

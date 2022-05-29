@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.resetDB = exports.signContract = exports.relationsDB = exports.populateDB = exports.getProviderInRange2 = exports.relationshipClientInstaller = exports.relationshipClientPlan = exports.relationshipProviderPlan = exports.createInstaller = exports.createPlan = exports.createProvider = exports.createClient = exports.deleteAll = void 0;
 const neo4j_driver_1 = __importDefault(require("neo4j-driver"));
-const driver = neo4j_driver_1.default.driver("bolt://54.236.32.225:7687", neo4j_driver_1.default.auth.basic("neo4j", "diagnoses-circumstance-representatives"));
+const driver = neo4j_driver_1.default.driver("bolt://3.219.237.135:7687", neo4j_driver_1.default.auth.basic("neo4j", "competitions-belt-egg"));
 function runDB(query) {
     return __awaiter(this, void 0, void 0, function* () {
         const session = driver.session();
