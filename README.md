@@ -33,7 +33,7 @@ E também o `Python >3.10.4` ou mais recente: https://www.python.org/.   <br><br
 
 <p style="text-align: justify; text-justify: inter-word;">
 
-No diretório raiz do projeto, execute o comando `npm install` para instalar todos os pacotes necessários. Para garantir que tudo esteja atualizado com o seu pacote, reconstrua o projeto executando o arquivo `BUILD.bat`. Depois, execute o arquivo `EXECUTE.bat` para iniciar o servidor. O Servidor de testes irá inicializar no endereço http://localhost:3000.
+No diretório raiz do projeto, execute o comando `npm install` para instalar todos os pacotes necessários. Depois, instale a dependência do neo4j usando `pip install neo4j`. Para garantir que tudo esteja atualizado com o seu pacote, reconstrua o projeto executando o arquivo `BUILD.bat`. Depois, execute o arquivo `EXECUTE.bat` para iniciar o servidor. O Servidor de testes irá inicializar no endereço http://localhost:3000.
 
 </p>
 
